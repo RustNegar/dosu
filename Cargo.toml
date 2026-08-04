@@ -1,0 +1,22 @@
+[package]
+name = "dosu"
+version = "0.1.0"
+edition = "2021"
+authors = ["Korosh Mirhajian"]
+license = "MIT"
+repository = "https://github.com/RustNegar/dosu"
+description = "دوسو (Dosu) — the CLI of the Rastnegar (RustNegar) project: a modern, cross-platform bidirectional terminal wrapper."
+
+[[bin]]
+name = "dosu"
+path = "src/main.rs"
+
+[dependencies]
+# Update the tag after each dosu-core release; never track `branch = "main"`.
+dosu-core = { git = "https://github.com/RustNegar/dosu-core", tag = "v0.1.0" }
+crossterm = "0.27"
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"
+clap = { version = "=4.4.18", features = ["derive"] }
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+vte = "0.13"
