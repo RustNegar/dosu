@@ -88,3 +88,51 @@ jobs:
         with:
           files: out/*
           generate_release_notes: true
+
+  update-homebrew:
+    name: update homebrew tap
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download checksums
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Checkout homebrew-dosu
+        uses: actions/checkout@v4
+        with:
+          repository: RustNegar/homebrew-dosu
+          token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+          path: homebrew-dosu
+
+      - name: Update formula
+        run: |
+          set -euo pipefail
+          version="${GITHUB_REF_NAME#v}"
+          formula="homebrew-dosu/Formula/dosu.rb"
+
+          sed -i "s/version \"[^\"]*\"/version \"$version\"/" "$formula"
+
+          update_sha() {
+              target="$1"
+              hash="$(cut -d' ' -f1 "artifacts/dosu-${target}/dosu-${target}.tar.gz.sha256")"
+              perl -0777 -pi -e "s/(dosu-\Q${target}\E\.tar\.gz\"\n\s*sha256 \")[a-f0-9]+(\")/\${1}${hash}\${2}/" "$formula"
+          }
+          update_sha aarch64-apple-darwin
+          update_sha x86_64-apple-darwin
+          update_sha aarch64-unknown-linux-gnu
+          update_sha x86_64-unknown-linux-gnu
+
+      - name: Commit and push
+        run: |
+          cd homebrew-dosu
+          if git diff --quiet; then
+            echo "Formula already up to date; nothing to commit."
+            exit 0
+          fi
+          git config user.name "dosu-release-bot"
+          git config user.email "actions@github.com"
+          git add Formula/dosu.rb
+          git commit -m "dosu ${GITHUB_REF_NAME}"
+          git push
