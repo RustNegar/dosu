@@ -23,10 +23,10 @@ jobs:
             os: ubuntu-latest
             cross: true
           - target: x86_64-apple-darwin
-            os: macos-13
+            os: macos-15-intel
             cross: false
           - target: aarch64-apple-darwin
-            os: macos-14
+            os: macos-15
             cross: false
 
     steps:
