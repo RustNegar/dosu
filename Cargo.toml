@@ -1,11 +1,11 @@
 [package]
 name = "dosu"
 version = "0.1.0"
-edition = "2021"
-authors = ["Korosh Mirhajian"]
+edition = "2026"
+authors = ["Kurosh Mirhajian"]
 license = "MIT"
 repository = "https://github.com/RustNegar/dosu"
-description = "دوسو (Dosu) — the CLI of the Rastnegar (RustNegar) project: a modern, cross-platform bidirectional terminal wrapper."
+description = "دوسو (Dosu) — the CLI of the Rustnegar project: a modern, cross-platform bidirectional terminal wrapper."
 
 [[bin]]
 name = "dosu"
