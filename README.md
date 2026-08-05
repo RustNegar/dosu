@@ -20,7 +20,6 @@
   <table>
     <tr>
       <td align="center" width="110"><a href="#about"><img src="assets/icons/about.svg" width="44" alt="About"/><br/><sub><b>About</b></sub></a></td>
-      <td align="center" width="110"><a href="#features"><img src="assets/icons/features.svg" width="44" alt="Features"/><br/><sub><b>Features</b></sub></a></td>
       <td align="center" width="110"><a href="#installation"><img src="assets/icons/install.svg" width="44" alt="Install"/><br/><sub><b>Install</b></sub></a></td>
       <td align="center" width="110"><a href="#usage"><img src="assets/icons/usage.svg" width="44" alt="Usage"/><br/><sub><b>Usage</b></sub></a></td>
       <td align="center" width="110"><a href="#configuration"><img src="assets/icons/config.svg" width="44" alt="Config"/><br/><sub><b>Config</b></sub></a></td>
@@ -156,15 +155,15 @@ Dosu has been tested extensively, but certain terminal/shell combinations may ne
 
 <table>
   <tr>
-    <td width="40" align="center"><img src="assets/icons/issues.svg" width="28" alt="Issue"/></td>
+    <td width="65" align="center"><img src="assets/icons/issues.svg" width="28" alt="Issue"/></td>
     <td><strong>Kitty Terminal</strong><br/>May require a <code>force_ltr</code> adjustment in <code>kitty.conf</code>.</td>
   </tr>
   <tr>
-    <td width="40" align="center"><img src="assets/icons/issues.svg" width="28" alt="Issue"/></td>
+    <td width="65" align="center"><img src="assets/icons/issues.svg" width="28" alt="Issue"/></td>
     <td><strong>tmux</strong><br/>Plugin conflicts are possible — check your <code>tmux-navigator</code> settings.</td>
   </tr>
   <tr>
-    <td width="40" align="center"><img src="assets/icons/issues.svg" width="28" alt="Issue"/></td>
+    <td width="65" align="center"><img src="assets/icons/issues.svg" width="28" alt="Issue"/></td>
     <td><strong>FZF Widget</strong><br/>Custom wrappers may need adjustment for RTL.</td>
   </tr>
 </table>
@@ -179,7 +178,7 @@ For detailed troubleshooting, see the [Wiki](https://github.com/RustNegar/dosu/w
 
 <table>
   <tr>
-    <td align="center" width="52"><img src="assets/icons/contact.svg" width="36" alt="Contact"/></td>
+    <td align="center" width="65"><img src="assets/icons/contact.svg" width="36" alt="Contact"/></td>
     <td>
       <strong>Repository</strong>: <a href="https://github.com/RustNegar/dosu">github.com/RustNegar/dosu</a><br/>
       <strong>Core Engine</strong>: <a href="https://github.com/RustNegar/dosu-core">github.com/RustNegar/dosu-core</a><br/>

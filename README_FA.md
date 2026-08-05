@@ -20,7 +20,6 @@
   <table>
     <tr>
       <td align="center" width="110"><a href="#درباره"><img src="assets/icons/about.svg" width="44" alt="درباره"/><br/><sub><b>درباره</b></sub></a></td>
-      <td align="center" width="110"><a href="#ویژگی‌ها"><img src="assets/icons/features.svg" width="44" alt="ویژگی‌ها"/><br/><sub><b>ویژگی‌ها</b></sub></a></td>
       <td align="center" width="110"><a href="#نصب"><img src="assets/icons/install.svg" width="44" alt="نصب"/><br/><sub><b>نصب</b></sub></a></td>
       <td align="center" width="110"><a href="#استفاده"><img src="assets/icons/usage.svg" width="44" alt="استفاده"/><br/><sub><b>استفاده</b></sub></a></td>
       <td align="center" width="110"><a href="#پیکربندی"><img src="assets/icons/config.svg" width="44" alt="پیکربندی"/><br/><sub><b>پیکربندی</b></sub></a></td>
@@ -158,15 +157,15 @@ alias d='dosu'
 
 <table>
   <tr>
-    <td width="40" align="center"><img src="assets/icons/issues.svg" width="28" alt="مشکل"/></td>
+    <td width="65" align="center"><img src="assets/icons/issues.svg" width="28" alt="مشکل"/></td>
     <td><strong>ترمینال Kitty</strong><br/>ممکن است نیاز به تنظیم <code>force_ltr</code> در <code>kitty.conf</code> باشد.</td>
   </tr>
   <tr>
-    <td width="40" align="center"><img src="assets/icons/issues.svg" width="28" alt="مشکل"/></td>
+    <td width="65" align="center"><img src="assets/icons/issues.svg" width="28" alt="مشکل"/></td>
     <td><strong>tmux</strong><br/>تداخل پلاگین ممکن است رخ دهد؛ تنظیمات <code>tmux-navigator</code> را بررسی کنید.</td>
   </tr>
   <tr>
-    <td width="40" align="center"><img src="assets/icons/issues.svg" width="28" alt="مشکل"/></td>
+    <td width="65" align="center"><img src="assets/icons/issues.svg" width="28" alt="مشکل"/></td>
     <td><strong>ویجت FZF</strong><br/>رپرهای سفارشی ممکن است نیاز به تنظیم برای RTL داشته باشند.</td>
   </tr>
 </table>
@@ -181,7 +180,7 @@ alias d='dosu'
 
 <table>
   <tr>
-    <td align="center" width="52"><img src="assets/icons/contact.svg" width="36" alt="تماس"/></td>
+    <td align="center" width="65"><img src="assets/icons/contact.svg" width="36" alt="تماس"/></td>
     <td>
       <strong>مخزن</strong>: <a href="https://github.com/RustNegar/dosu">github.com/RustNegar/dosu</a><br/>
       <strong>هستهٔ اصلی</strong>: <a href="https://github.com/RustNegar/dosu-core">github.com/RustNegar/dosu-core</a><br/>

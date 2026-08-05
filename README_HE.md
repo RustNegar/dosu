@@ -20,7 +20,6 @@
   <table>
     <tr>
       <td align="center" width="110"><a href="#אודות"><img src="assets/icons/about.svg" width="44" alt="אודות"/><br/><sub><b>אודות</b></sub></a></td>
-      <td align="center" width="110"><a href="#תכונות"><img src="assets/icons/features.svg" width="44" alt="תכונות"/><br/><sub><b>תכונות</b></sub></a></td>
       <td align="center" width="110"><a href="#התקנה"><img src="assets/icons/install.svg" width="44" alt="התקנה"/><br/><sub><b>התקנה</b></sub></a></td>
       <td align="center" width="110"><a href="#שימוש"><img src="assets/icons/usage.svg" width="44" alt="שימוש"/><br/><sub><b>שימוש</b></sub></a></td>
       <td align="center" width="110"><a href="#הגדרות"><img src="assets/icons/config.svg" width="44" alt="הגדרות"/><br/><sub><b>הגדרות</b></sub></a></td>
@@ -158,15 +157,15 @@ Dosu נבדק באופן נרחב, אך שילובים מסוימים של טר�
 
 <table>
   <tr>
-    <td width="40" align="center"><img src="assets/icons/issues.svg" width="28" alt="בעיה"/></td>
+    <td width="65" align="center"><img src="assets/icons/issues.svg" width="28" alt="בעיה"/></td>
     <td><strong>טרמינל Kitty</strong><br/>ייתכן שיידרש שינוי <code>force_ltr</code> בקובץ <code>kitty.conf</code>.</td>
   </tr>
   <tr>
-    <td width="40" align="center"><img src="assets/icons/issues.svg" width="28" alt="בעיה"/></td>
+    <td width="65" align="center"><img src="assets/icons/issues.svg" width="28" alt="בעיה"/></td>
     <td><strong>tmux</strong><br/>ייתכנו התנגשויות תוספים — בדקו את הגדרות <code>tmux-navigator</code>.</td>
   </tr>
   <tr>
-    <td width="40" align="center"><img src="assets/icons/issues.svg" width="28" alt="בעיה"/></td>
+    <td width="65" align="center"><img src="assets/icons/issues.svg" width="28" alt="בעיה"/></td>
     <td><strong>ווידג'ט FZF</strong><br/>עטיפות מותאמות אישית עשויות לדרוש התאמה עבור RTL.</td>
   </tr>
 </table>
@@ -181,7 +180,7 @@ Dosu נבדק באופן נרחב, אך שילובים מסוימים של טר�
 
 <table>
   <tr>
-    <td align="center" width="52"><img src="assets/icons/contact.svg" width="36" alt="יצירת קשר"/></td>
+    <td align="center" width="65"><img src="assets/icons/contact.svg" width="36" alt="יצירת קשר"/></td>
     <td>
       <strong>מאגר</strong>: <a href="https://github.com/RustNegar/dosu">github.com/RustNegar/dosu</a><br/>
       <strong>מנוע הליבה</strong>: <a href="https://github.com/RustNegar/dosu-core">github.com/RustNegar/dosu-core</a><br/>

@@ -20,7 +20,6 @@
   <table>
     <tr>
       <td align="center" width="110"><a href="#نبذة"><img src="assets/icons/about.svg" width="44" alt="نبذة"/><br/><sub><b>نبذة</b></sub></a></td>
-      <td align="center" width="110"><a href="#الميزات"><img src="assets/icons/features.svg" width="44" alt="الميزات"/><br/><sub><b>الميزات</b></sub></a></td>
       <td align="center" width="110"><a href="#التثبيت"><img src="assets/icons/install.svg" width="44" alt="التثبيت"/><br/><sub><b>التثبيت</b></sub></a></td>
       <td align="center" width="110"><a href="#الاستخدام"><img src="assets/icons/usage.svg" width="44" alt="الاستخدام"/><br/><sub><b>الاستخدام</b></sub></a></td>
       <td align="center" width="110"><a href="#الإعدادات"><img src="assets/icons/config.svg" width="44" alt="الإعدادات"/><br/><sub><b>الإعدادات</b></sub></a></td>
@@ -158,15 +157,15 @@ alias d='dosu'
 
 <table>
   <tr>
-    <td width="40" align="center"><img src="assets/icons/issues.svg" width="28" alt="مشكلة"/></td>
+    <td width="65" align="center"><img src="assets/icons/issues.svg" width="28" alt="مشكلة"/></td>
     <td><strong>طرفية Kitty</strong><br/>قد تحتاج إلى ضبط <code>force_ltr</code> في <code>kitty.conf</code>.</td>
   </tr>
   <tr>
-    <td width="40" align="center"><img src="assets/icons/issues.svg" width="28" alt="مشكلة"/></td>
+    <td width="65" align="center"><img src="assets/icons/issues.svg" width="28" alt="مشكلة"/></td>
     <td><strong>tmux</strong><br/>قد تحدث تعارضات في الإضافات — تحقّق من إعدادات <code>tmux-navigator</code>.</td>
   </tr>
   <tr>
-    <td width="40" align="center"><img src="assets/icons/issues.svg" width="28" alt="مشكلة"/></td>
+    <td width="65" align="center"><img src="assets/icons/issues.svg" width="28" alt="مشكلة"/></td>
     <td><strong>أداة FZF</strong><br/>قد تحتاج الأغلفة المخصّصة إلى تعديل لدعم الاتجاه من اليمين إلى اليسار.</td>
   </tr>
 </table>
@@ -181,7 +180,7 @@ alias d='dosu'
 
 <table>
   <tr>
-    <td align="center" width="52"><img src="assets/icons/contact.svg" width="36" alt="تواصل"/></td>
+    <td align="center" width="65"><img src="assets/icons/contact.svg" width="36" alt="تواصل"/></td>
     <td>
       <strong>المستودع</strong>: <a href="https://github.com/RustNegar/dosu">github.com/RustNegar/dosu</a><br/>
       <strong>المحرّك الأساسي</strong>: <a href="https://github.com/RustNegar/dosu-core">github.com/RustNegar/dosu-core</a><br/>
