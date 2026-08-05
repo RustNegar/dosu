@@ -1,0 +1,20 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="featBg" x1="4" y1="2" x2="36" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3A4C61"/>
+      <stop offset="100%" stop-color="#1F2933"/>
+    </linearGradient>
+    <linearGradient id="featCap" x1="26" y1="4" x2="38" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7FE8F5"/>
+      <stop offset="100%" stop-color="#22C8E6"/>
+    </linearGradient>
+    <clipPath id="featClip">
+      <rect x="2" y="2" width="36" height="36" rx="10"/>
+    </clipPath>
+  </defs>
+  <rect x="2" y="2" width="36" height="36" rx="10" fill="url(#featBg)"/>
+  <g clip-path="url(#featClip)">
+    <polygon points="24,2 38,2 38,16" fill="url(#featCap)" opacity="0.9"/>
+  </g>
+  <path d="M21.5 9 L13 22 h5.2 l-1.7 9 L26 18 h-5.2 z" fill="#EAF8FB"/>
+</svg>

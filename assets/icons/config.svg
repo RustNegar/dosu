@@ -1,0 +1,24 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cfgBg" x1="4" y1="2" x2="36" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3A4C61"/>
+      <stop offset="100%" stop-color="#1F2933"/>
+    </linearGradient>
+    <linearGradient id="cfgCap" x1="26" y1="4" x2="38" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7FE8F5"/>
+      <stop offset="100%" stop-color="#22C8E6"/>
+    </linearGradient>
+    <clipPath id="cfgClip">
+      <rect x="2" y="2" width="36" height="36" rx="10"/>
+    </clipPath>
+  </defs>
+  <rect x="2" y="2" width="36" height="36" rx="10" fill="url(#cfgBg)"/>
+  <g clip-path="url(#cfgClip)">
+    <polygon points="24,2 38,2 38,16" fill="url(#cfgCap)" opacity="0.9"/>
+  </g>
+  <g fill="none" stroke="#EAF8FB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 14.5 v-3 M20 28.5 v-3 M25.9 17.1 l2.1-2.1 M12 25 l2.1-2.1 M25.9 22.9 l2.1 2.1 M12 15 l2.1 2.1"/>
+    <circle cx="20" cy="20" r="6" />
+  </g>
+  <circle cx="20" cy="20" r="2.3" fill="#22C8E6"/>
+</svg>

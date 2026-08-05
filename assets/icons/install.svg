@@ -1,0 +1,22 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="instBg" x1="4" y1="2" x2="36" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3A4C61"/>
+      <stop offset="100%" stop-color="#1F2933"/>
+    </linearGradient>
+    <linearGradient id="instCap" x1="26" y1="4" x2="38" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7FE8F5"/>
+      <stop offset="100%" stop-color="#22C8E6"/>
+    </linearGradient>
+    <clipPath id="instClip">
+      <rect x="2" y="2" width="36" height="36" rx="10"/>
+    </clipPath>
+  </defs>
+  <rect x="2" y="2" width="36" height="36" rx="10" fill="url(#instBg)"/>
+  <g clip-path="url(#instClip)">
+    <polygon points="24,2 38,2 38,16" fill="url(#instCap)" opacity="0.9"/>
+  </g>
+  <path d="M20 8.5 v13.5" stroke="#EAF8FB" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M14.5 16.5 L20 22.5 L25.5 16.5" fill="none" stroke="#EAF8FB" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="12" y="27" width="16" height="3.4" rx="1.7" fill="#22C8E6"/>
+</svg>

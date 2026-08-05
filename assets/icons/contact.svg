@@ -1,0 +1,21 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ctBg" x1="4" y1="2" x2="36" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3A4C61"/>
+      <stop offset="100%" stop-color="#1F2933"/>
+    </linearGradient>
+    <linearGradient id="ctCap" x1="26" y1="4" x2="38" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7FE8F5"/>
+      <stop offset="100%" stop-color="#22C8E6"/>
+    </linearGradient>
+    <clipPath id="ctClip">
+      <rect x="2" y="2" width="36" height="36" rx="10"/>
+    </clipPath>
+  </defs>
+  <rect x="2" y="2" width="36" height="36" rx="10" fill="url(#ctBg)"/>
+  <g clip-path="url(#ctClip)">
+    <polygon points="24,2 38,2 38,16" fill="url(#ctCap)" opacity="0.9"/>
+  </g>
+  <rect x="9.5" y="13" width="21" height="15" rx="2.6" fill="none" stroke="#EAF8FB" stroke-width="2.4"/>
+  <path d="M10.3 14.3 L20 22 L29.7 14.3" fill="none" stroke="#22C8E6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
