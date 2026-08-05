@@ -172,7 +172,7 @@ Dosu נבדק באופן נרחב, אך שילובים מסוימים של טר�
 
 הריצו `dosu doctor` לאבחון אוטומטי והמלצות תיקון.
 
-לפתרון בעיות מפורט יותר, ראו את ה[Wiki](https://github.com/RustNegar/dosu/wiki/Troubleshooting).
+לפתרון בעיות מפורט יותר, ראו את ה[Wiki](https://github.com/RustNegar/dosu/wiki/Troubleshooting-he).
 
 <br>
 

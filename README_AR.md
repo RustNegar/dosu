@@ -172,7 +172,7 @@ alias d='dosu'
 
 للكشف التلقائي والحصول على توصيات الإصلاح، شغّل الأمر `dosu doctor`.
 
-لاستكشاف الأخطاء وإصلاحها بتفصيل أكبر، راجع [الويكي](https://github.com/RustNegar/dosu/wiki/Troubleshooting).
+لاستكشاف الأخطاء وإصلاحها بتفصيل أكبر، راجع [الويكي](https://github.com/RustNegar/dosu/wiki/Troubleshooting-ar).
 
 <br>
 

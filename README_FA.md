@@ -172,7 +172,7 @@ alias d='dosu'
 
 برای تشخیص خودکار و دریافت توصیه‌های تعمیر، دستور `dosu doctor` را اجرا کنید.
 
-برای عیب‌یابی دقیق‌تر، به [Wiki](https://github.com/RustNegar/dosu/wiki/Troubleshooting) مراجعه کنید.
+برای عیب‌یابی دقیق‌تر، به [Wiki](https://github.com/RustNegar/dosu/wiki/Troubleshooting-fa) مراجعه کنید.
 
 <br>
 
