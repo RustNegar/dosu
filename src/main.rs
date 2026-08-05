@@ -78,7 +78,10 @@ impl DebugTap {
 }
 
 #[derive(ClapParser, Debug)]
-#[command(name = "dosu", about = "A modern bidirectional (Persian/Arabic) terminal wrapper")]
+#[command(
+    name = "dosu",
+    about = "A modern bidirectional (Persian/Arabic) terminal wrapper"
+)]
 struct Args {
     /// Command to run instead of the default shell.
     command: Option<String>,
@@ -131,7 +134,9 @@ async fn main() -> Result<()> {
     if std::env::var("DOSU").is_ok() {
         eprintln!("dosu: already running inside dosu, skipping.");
         let shell = command.unwrap_or_else(|| std::env::var("SHELL").unwrap_or("/bin/zsh".into()));
-        return Err(anyhow::anyhow!("refusing nested launch; run `{shell}` directly instead"));
+        return Err(anyhow::anyhow!(
+            "refusing nested launch; run `{shell}` directly instead"
+        ));
     }
 
     let (cols, term_rows) = term_size();
@@ -146,13 +151,11 @@ async fn main() -> Result<()> {
     // just clear and start at top-left. Trades preserving prior screen
     // content for removing the "real scroll vs. row_offset bookkeeping"
     // bug class.
-    let stdout_handle = io::stdout();
     {
-        let mut out = stdout_handle.lock();
+        let mut out = io::stdout().lock();
         out.write_all(b"\x1b[2J\x1b[H")?;
         out.flush()?;
     }
-    drop(stdout_handle);
     let row_offset = 0usize;
     let rows = term_rows;
 
@@ -170,7 +173,10 @@ async fn main() -> Result<()> {
 
     let grid = Arc::new(Mutex::new(Grid::new(cols as usize, rows as usize)));
     let renderer = Arc::new(Mutex::new(Renderer::new()));
-    renderer.lock().unwrap().set_row_offset(row_offset, term_rows as usize);
+    renderer
+        .lock()
+        .unwrap()
+        .set_row_offset(row_offset, term_rows as usize);
     let mut parser = vte::Parser::new();
 
     // Task: pty -> parse -> bidi -> render.
@@ -206,17 +212,24 @@ async fn main() -> Result<()> {
                         }
                         let scroll_lines = g.take_scroll_lines();
                         let visual = reorder_grid(&g, &NoopShaper);
-                        let mut out = TeeOut { inner: stdout.lock(), tap: debug_tap.dosu_to_terminal.clone() };
-                        renderer_for_reader
-                            .lock()
-                            .unwrap()
-                            .render(&visual, &mut out, scroll_lines)?;
+                        let mut out = TeeOut {
+                            inner: stdout.lock(),
+                            tap: debug_tap.dosu_to_terminal.clone(),
+                        };
+                        renderer_for_reader.lock().unwrap().render(
+                            &visual,
+                            &mut out,
+                            scroll_lines,
+                        )?;
                     }
                     Segment::Raw(bytes) => {
                         // Alt-screen content (neovim, tmux, less, ...):
                         // the child drives the real terminal directly.
                         // Don't touch Grid while this is happening.
-                        let mut out = TeeOut { inner: stdout.lock(), tap: debug_tap.dosu_to_terminal.clone() };
+                        let mut out = TeeOut {
+                            inner: stdout.lock(),
+                            tap: debug_tap.dosu_to_terminal.clone(),
+                        };
                         out.write_all(&bytes)?;
                         out.flush()?;
                         if !scanner.in_alt_screen() {
@@ -242,10 +255,11 @@ async fn main() -> Result<()> {
     let grid_for_resize = grid.clone();
     let renderer_for_resize = renderer.clone();
     let resize_task = tokio::task::spawn(async move {
-        let mut sig = match tokio::signal::unix::signal(tokio::signal::unix::SignalKind::window_change()) {
-            Ok(s) => s,
-            Err(_) => return, // resize notifications unavailable; degrade silently
-        };
+        let mut sig =
+            match tokio::signal::unix::signal(tokio::signal::unix::SignalKind::window_change()) {
+                Ok(s) => s,
+                Err(_) => return, // resize notifications unavailable; degrade silently
+            };
         loop {
             if sig.recv().await.is_none() {
                 break;

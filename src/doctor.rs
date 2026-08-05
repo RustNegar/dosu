@@ -35,12 +35,13 @@ impl Status {
 pub fn run() {
     println!("dosu doctor — بررسی محیط\n");
 
-    let mut checks = Vec::new();
-    checks.push(check_term_program());
-    checks.push(check_kitty_force_ltr());
-    checks.push(check_tmux_navigator());
-    checks.push(check_fzf_widget_wrapper());
-    checks.push(check_vi_mode());
+    let checks = vec![
+        check_term_program(),
+        check_kitty_force_ltr(),
+        check_tmux_navigator(),
+        check_fzf_widget_wrapper(),
+        check_vi_mode(),
+    ];
 
     let mut warn_count = 0;
     for c in &checks {
@@ -75,10 +76,17 @@ fn read_to_string(path: &Path) -> Option<String> {
 
 fn check_term_program() -> Check {
     let term_program = std::env::var("TERM_PROGRAM").unwrap_or_default();
-    let known = ["ghostty", "kitty", "iTerm.app", "Apple_Terminal", "tmux", "WezTerm"];
+    let known = [
+        "ghostty",
+        "kitty",
+        "iTerm.app",
+        "Apple_Terminal",
+        "tmux",
+        "WezTerm",
+    ];
     if term_program.is_empty() {
         Check {
-            name: "ترمینال میزبان".into(),
+            name: "ترمینال میزبان",
             status: Status::Info,
             detail: "TERM_PROGRAM تشخیص داده نشد؛ نمی‌شه چک‌های مخصوصِ ترمینال رو انجام داد.".into(),
         }
@@ -100,11 +108,15 @@ fn check_term_program() -> Check {
 fn check_kitty_force_ltr() -> Check {
     let term_program = std::env::var("TERM_PROGRAM").unwrap_or_default();
     if !term_program.to_lowercase().contains("kitty") {
-        return Check { name: "Kitty force_ltr".into(), status: Status::Ok, detail: String::new() };
+        return Check {
+            name: "Kitty force_ltr",
+            status: Status::Ok,
+            detail: String::new(),
+        };
     }
     let Some(home) = home() else {
         return Check {
-            name: "Kitty force_ltr".into(),
+            name: "Kitty force_ltr",
             status: Status::Info,
             detail: "$HOME پیدا نشد، نمی‌شه kitty.conf رو چک کرد.".into(),
         };
@@ -116,10 +128,14 @@ fn check_kitty_force_ltr() -> Check {
         .map(str::trim)
         .any(|l| l.starts_with("force_ltr") && l.split_whitespace().nth(1) == Some("yes"));
     if has_it {
-        Check { name: "Kitty force_ltr".into(), status: Status::Ok, detail: String::new() }
+        Check {
+            name: "Kitty force_ltr",
+            status: Status::Ok,
+            detail: String::new(),
+        }
     } else {
         Check {
-            name: "Kitty force_ltr".into(),
+            name: "Kitty force_ltr",
             status: Status::Warn,
             detail: format!(
                 "Kitty خودش یه heuristic bidi داره که با reorder دوسو تداخل می‌کنه.\nاین خط رو به {} اضافه کن:\n\n  force_ltr yes",
@@ -131,19 +147,31 @@ fn check_kitty_force_ltr() -> Check {
 
 fn check_tmux_navigator() -> Check {
     let Some(home) = home() else {
-        return Check { name: "tmux navigator plugin".into(), status: Status::Ok, detail: String::new() };
+        return Check {
+            name: "tmux navigator plugin",
+            status: Status::Ok,
+            detail: String::new(),
+        };
     };
     let plugin_dir = home.join(".tmux/plugins/vim-tmux-navigator");
     if !plugin_dir.exists() {
-        return Check { name: "tmux navigator plugin".into(), status: Status::Ok, detail: String::new() };
+        return Check {
+            name: "tmux navigator plugin",
+            status: Status::Ok,
+            detail: String::new(),
+        };
     }
     let conf = home.join(".tmux.conf");
     let content = read_to_string(&conf).unwrap_or_default();
     if content.contains("@navigator_active") {
-        Check { name: "tmux navigator plugin".into(), status: Status::Ok, detail: String::new() }
+        Check {
+            name: "tmux navigator plugin",
+            status: Status::Ok,
+            detail: String::new(),
+        }
     } else {
         Check {
-            name: "tmux navigator plugin".into(),
+            name: "tmux navigator plugin",
             status: Status::Warn,
             detail: format!(
                 "vim-tmux-navigator نصبه ولی @navigator_active توی {} پیدا نشد.\nCtrl+hjkl ممکنه داخل fzf/vim به‌درستی فوروارد نشه (ps -t <tty> در\nبعضی محیط‌ها شکننده‌ست: github.com/christoomey/vim-tmux-navigator/issues/417).\nراه‌حل کامل توی بخش «تداخل‌های شناخته‌شده» README.",
@@ -155,28 +183,43 @@ fn check_tmux_navigator() -> Check {
 
 fn check_fzf_widget_wrapper() -> Check {
     let Some(home) = home() else {
-        return Check { name: "fzf widget wrapper".into(), status: Status::Ok, detail: String::new() };
+        return Check {
+            name: "fzf widget wrapper",
+            status: Status::Ok,
+            detail: String::new(),
+        };
     };
-    if std::process::Command::new("which")
+    if !std::process::Command::new("which")
         .arg("fzf")
         .output()
         .map(|o| !o.stdout.is_empty())
         .unwrap_or(false)
-        == false
     {
-        return Check { name: "fzf widget wrapper".into(), status: Status::Ok, detail: String::new() };
+        return Check {
+            name: "fzf widget wrapper",
+            status: Status::Ok,
+            detail: String::new(),
+        };
     }
     let zshrc = home.join(".zshrc");
     let content = read_to_string(&zshrc).unwrap_or_default();
     let has_tmux_navigator = home.join(".tmux/plugins/vim-tmux-navigator").exists();
     if !has_tmux_navigator {
-        return Check { name: "fzf widget wrapper".into(), status: Status::Ok, detail: String::new() };
+        return Check {
+            name: "fzf widget wrapper",
+            status: Status::Ok,
+            detail: String::new(),
+        };
     }
     if content.contains("navigator_mark") {
-        Check { name: "fzf widget wrapper".into(), status: Status::Ok, detail: String::new() }
+        Check {
+            name: "fzf widget wrapper",
+            status: Status::Ok,
+            detail: String::new(),
+        }
     } else {
         Check {
-            name: "fzf widget wrapper".into(),
+            name: "fzf widget wrapper",
             status: Status::Warn,
             detail: "fzf و vim-tmux-navigator هر دو هستن ولی wrapper مربوطه توی .zshrc\nپیدا نشد. جزئیات کامل توی بخش «تداخل‌های شناخته‌شده» README.".into(),
         }
@@ -185,7 +228,11 @@ fn check_fzf_widget_wrapper() -> Check {
 
 fn check_vi_mode() -> Check {
     let Some(home) = home() else {
-        return Check { name: "zsh vi-mode".into(), status: Status::Ok, detail: String::new() };
+        return Check {
+            name: "zsh vi-mode",
+            status: Status::Ok,
+            detail: String::new(),
+        };
     };
     let zshrc = home.join(".zshrc");
     let content = read_to_string(&zshrc).unwrap_or_default();
@@ -195,11 +242,15 @@ fn check_vi_mode() -> Check {
         .any(|l| l == "bindkey -v" || l.starts_with("bindkey -v "));
     if has_vi_mode {
         Check {
-            name: "zsh vi-mode (bindkey -v)".into(),
+            name: "zsh vi-mode (bindkey -v)",
             status: Status::Warn,
             detail: "پشتیبانی از vi-mode هنوز کامل نیست (احتمالاً به تغییر شکل\nکرسر/DECSCUSR مربوطه). اگه رفتار عجیبی دیدی، با DOSU_DEBUG_DIR\nیه لاگ بگیر و گزارش بده.".into(),
         }
     } else {
-        Check { name: "zsh vi-mode".into(), status: Status::Ok, detail: String::new() }
+        Check {
+            name: "zsh vi-mode",
+            status: Status::Ok,
+            detail: String::new(),
+        }
     }
 }
