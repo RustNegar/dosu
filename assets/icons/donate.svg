@@ -1,0 +1,20 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="donateBg" x1="4" y1="2" x2="36" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3A4C61"/>
+      <stop offset="100%" stop-color="#1F2933"/>
+    </linearGradient>
+    <linearGradient id="donateCap" x1="26" y1="4" x2="38" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7FE8F5"/>
+      <stop offset="100%" stop-color="#22C8E6"/>
+    </linearGradient>
+    <clipPath id="donateClip">
+      <rect x="2" y="2" width="36" height="36" rx="10"/>
+    </clipPath>
+  </defs>
+  <rect x="2" y="2" width="36" height="36" rx="10" fill="url(#donateBg)"/>
+  <g clip-path="url(#donateClip)">
+    <polygon points="24,2 38,2 38,16" fill="url(#donateCap)" opacity="0.9"/>
+  </g>
+  <path d="M20 29.5 C20 29.5 9.8 23.2 9.8 15.9 C9.8 11.6 13 8.9 16.4 9.9 C18.1 10.4 19.3 11.7 20 13 C20.7 11.7 21.9 10.4 23.6 9.9 C27 8.9 30.2 11.6 30.2 15.9 C30.2 23.2 20 29.5 20 29.5 Z" fill="#EAF8FB"/>
+</svg>

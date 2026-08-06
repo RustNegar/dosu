@@ -21,6 +21,7 @@
     <tr>
       <td align="center" width="110"><a href="#about"><img src="assets/icons/about.svg" width="44" alt="About"/><br/><sub><b>About</b></sub></a></td>
       <td align="center" width="110"><a href="#installation"><img src="assets/icons/install.svg" width="44" alt="Install"/><br/><sub><b>Install</b></sub></a></td>
+      <td align="center" width="110"><a href="#support-the-project---donate"><img src="assets/icons/donate.svg" width="44" alt="Donate"/><br/><sub><b>Donate</b></sub></a></td>
       <td align="center" width="110"><a href="#usage"><img src="assets/icons/usage.svg" width="44" alt="Usage"/><br/><sub><b>Usage</b></sub></a></td>
       <td align="center" width="110"><a href="#configuration"><img src="assets/icons/config.svg" width="44" alt="Config"/><br/><sub><b>Config</b></sub></a></td>
       <td align="center" width="110"><a href="#known-issues"><img src="assets/icons/issues.svg" width="44" alt="Issues"/><br/><sub><b>Issues</b></sub></a></td>
@@ -187,6 +188,22 @@ For detailed troubleshooting, see the [Wiki](https://github.com/RustNegar/dosu/w
     </td>
   </tr>
 </table>
+
+<br>
+
+## Support the Project - Donate
+
+If Dosu has been useful to you, consider supporting its continued development. Every contribution, big or small, is deeply appreciated.
+
+<div align="center">
+
+| Network                                                                                                          | Address                                            |
+| :--------------------------------------------------------------------------------------------------------------- | :------------------------------------------------- |
+| ![TON](https://img.shields.io/badge/TON-0088CC?style=flat-square&logo=ton&logoColor=white)                       | `UQDPxrimgBU6Mil0dhDn0Fc303RLRXKr9hGGDu7bTEBdGGqs` |
+| ![TRC20](<https://img.shields.io/badge/TRC20%20(Tron)-FF060A?style=flat-square&logo=tron&logoColor=white>)       | `TXix7uf6JPUKvWeUbA4A7wmQLVKnDbLRQU`               |
+| ![ETH](<https://img.shields.io/badge/ERC20%20(Ethereum)-3C3C3D?style=flat-square&logo=ethereum&logoColor=white>) | `0x1FC907d3396460f1Cd94E3BC48564b1b46b70026`       |
+
+</div>
 
 <br>
 

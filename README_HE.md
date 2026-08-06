@@ -21,6 +21,7 @@
     <tr>
       <td align="center" width="110"><a href="#אודות"><img src="assets/icons/about.svg" width="44" alt="אודות"/><br/><sub><b>אודות</b></sub></a></td>
       <td align="center" width="110"><a href="#התקנה"><img src="assets/icons/install.svg" width="44" alt="התקנה"/><br/><sub><b>התקנה</b></sub></a></td>
+      <td align="center" width="110"><a href="#תמיכה-בפרויקט---תרומה"><img src="assets/icons/donate.svg" width="44" alt="תרומה"/><br/><sub><b>תרומה</b></sub></a></td>
       <td align="center" width="110"><a href="#שימוש"><img src="assets/icons/usage.svg" width="44" alt="שימוש"/><br/><sub><b>שימוש</b></sub></a></td>
       <td align="center" width="110"><a href="#הגדרות"><img src="assets/icons/config.svg" width="44" alt="הגדרות"/><br/><sub><b>הגדרות</b></sub></a></td>
       <td align="center" width="110"><a href="#בעיות-ידועות"><img src="assets/icons/issues.svg" width="44" alt="בעיות"/><br/><sub><b>בעיות</b></sub></a></td>
@@ -189,6 +190,22 @@ Dosu נבדק באופן נרחב, אך שילובים מסוימים של טר�
     </td>
   </tr>
 </table>
+
+<br>
+
+## תמיכה בפרויקט - תרומה
+
+אם Dosu הייתה שימושית עבורכם, שקלו לתמוך בהמשך הפיתוח שלה. כל תרומה, גדולה או קטנה, מוערכת מאוד.
+
+</div>
+
+<div dir="ltr" align="center">
+
+| Network                                                                                                          | Address                                            |
+| :--------------------------------------------------------------------------------------------------------------- | :------------------------------------------------- |
+| ![TON](https://img.shields.io/badge/TON-0088CC?style=flat-square&logo=ton&logoColor=white)                       | `UQDPxrimgBU6Mil0dhDn0Fc303RLRXKr9hGGDu7bTEBdGGqs` |
+| ![TRC20](<https://img.shields.io/badge/TRC20%20(Tron)-FF060A?style=flat-square&logo=tron&logoColor=white>)       | `TXix7uf6JPUKvWeUbA4A7wmQLVKnDbLRQU`               |
+| ![ETH](<https://img.shields.io/badge/ERC20%20(Ethereum)-3C3C3D?style=flat-square&logo=ethereum&logoColor=white>) | `0x1FC907d3396460f1Cd94E3BC48564b1b46b70026`       |
 
 </div>
 

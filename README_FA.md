@@ -21,6 +21,7 @@
     <tr>
       <td align="center" width="110"><a href="#درباره"><img src="assets/icons/about.svg" width="44" alt="درباره"/><br/><sub><b>درباره</b></sub></a></td>
       <td align="center" width="110"><a href="#نصب"><img src="assets/icons/install.svg" width="44" alt="نصب"/><br/><sub><b>نصب</b></sub></a></td>
+      <td align="center" width="110"><a href="#حمایت-از-پروژه"><img src="assets/icons/donate.svg" width="44" alt="دونیت"/><br/><sub><b>دونیت</b></sub></a></td>
       <td align="center" width="110"><a href="#استفاده"><img src="assets/icons/usage.svg" width="44" alt="استفاده"/><br/><sub><b>استفاده</b></sub></a></td>
       <td align="center" width="110"><a href="#پیکربندی"><img src="assets/icons/config.svg" width="44" alt="پیکربندی"/><br/><sub><b>پیکربندی</b></sub></a></td>
       <td align="center" width="110"><a href="#مشکلات-شناخته‌شده"><img src="assets/icons/issues.svg" width="44" alt="مشکلات"/><br/><sub><b>مشکلات</b></sub></a></td>
@@ -189,6 +190,22 @@ alias d='dosu'
     </td>
   </tr>
 </table>
+
+<br>
+
+## حمایت از پروژه
+
+اگر دوسو برایتان مفید بوده، حمایت از توسعهٔ مداومش را در نظر بگیرید. هر کمکی، کوچک یا بزرگ، بی‌نهایت ارزشمند است.
+
+</div>
+
+<div dir="ltr" align="center">
+
+| Network                                                                                                          | Address                                            |
+| :--------------------------------------------------------------------------------------------------------------- | :------------------------------------------------- |
+| ![TON](https://img.shields.io/badge/TON-0088CC?style=flat-square&logo=ton&logoColor=white)                       | `UQDPxrimgBU6Mil0dhDn0Fc303RLRXKr9hGGDu7bTEBdGGqs` |
+| ![TRC20](<https://img.shields.io/badge/TRC20%20(Tron)-FF060A?style=flat-square&logo=tron&logoColor=white>)       | `TXix7uf6JPUKvWeUbA4A7wmQLVKnDbLRQU`               |
+| ![ETH](<https://img.shields.io/badge/ERC20%20(Ethereum)-3C3C3D?style=flat-square&logo=ethereum&logoColor=white>) | `0x1FC907d3396460f1Cd94E3BC48564b1b46b70026`       |
 
 </div>
 
