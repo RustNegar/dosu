@@ -26,11 +26,12 @@ use std::sync::{Arc, Mutex};
 /// told apart (a `script -q ... dosu` capture only ever sees
 /// `dosu_to_terminal.log`, i.e. what Dosu decided to draw):
 ///   - `child_to_dosu.log`     raw bytes from the child's pty, before the
-///                             alt-screen scanner or vte parser touch them.
+///     alt-screen scanner or vte parser touch them.
 ///   - `dosu_to_child.log`     bytes Dosu writes back to the child
-///                             (currently just terminal-query replies).
+///     (currently just terminal-query replies).
 ///   - `dosu_to_terminal.log`  bytes Dosu writes to the real terminal
-///                             (render diffs + raw alt-screen passthrough).
+///     (render diffs + raw alt-screen passthrough).
+///
 /// Each write is preceded by a `=== <label> len=N ===` marker line.
 #[derive(Clone)]
 struct DebugTap {
