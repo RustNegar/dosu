@@ -8,6 +8,7 @@
 //!                                                       Renderer -> real tty
 
 mod doctor;
+mod update_check;
 
 use anyhow::Result;
 use clap::Parser as ClapParser;
@@ -119,12 +120,24 @@ async fn main() -> Result<()> {
         doctor::run();
         return Ok(());
     }
+    if std::env::args().nth(1).as_deref() == Some("update") {
+        update_check::run_update_command();
+        return Ok(());
+    }
 
     let args = Args::parse();
     let config = Config::load();
     let filter = tracing_subscriber::EnvFilter::try_new(&config.log_level)
         .unwrap_or_else(|_| tracing_subscriber::EnvFilter::new("warn"));
     tracing_subscriber::fmt().with_env_filter(filter).init();
+
+    // Cache-only, network-free -- must happen before raw mode / the
+    // screen clear below, since that's the last point dosu has a
+    // coherent place to print anything to the "normal" scrollback.
+    update_check::check_cached_and_notify(&config);
+    // Fire-and-forget: refreshes the cache in the background (if
+    // stale) for the *next* run. Never awaited.
+    update_check::spawn_background_refresh(&config);
 
     // CLI arg wins; config.toml's `shell` is the fallback before $SHELL
     // (which PtySession::spawn falls back to on its own for `None`).
