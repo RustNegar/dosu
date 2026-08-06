@@ -116,6 +116,28 @@ This creates three log files:
 | `dosu_to_child.log`    | Bytes written back to the child  |
 | `dosu_to_terminal.log` | Render output to the terminal    |
 
+### Update Check
+
+`dosu` periodically checks GitHub Releases for a newer version (every 7 days by default), similar to oh-my-zsh. The check never blocks startup: it reads a small cache file, prints a short notice if you're behind, and refreshes that cache in the background for next time. If it finds a newer version:
+
+```
+⚠ A new version of dosu is available: 0.2.0 (you have 0.1.0). Run `dosu update` or see https://github.com/RustNegar/dosu/releases
+```
+
+Run `dosu update` to see the right upgrade command for how you installed it:
+
+```bash
+dosu update
+```
+
+To disable the check entirely (useful in restricted/offline/CI environments):
+
+```bash
+export DOSU_DISABLE_UPDATE_CHECK=1
+```
+
+It can also be disabled, or the interval changed, via `config.toml` (see [Configuration](#configuration)).
+
 ### Command Line Options
 
 ```bash
@@ -127,6 +149,13 @@ dosu --help
 ## Configuration
 
 Dosu works out of the box with sensible defaults. However, you may need to adjust your terminal or shell configuration for the best experience.
+
+Settings live in `~/.config/dosu/config.toml` (created only if you add it yourself). Relevant to the update check:
+
+```toml
+update_check_enabled = true       # set false to disable (or use DOSU_DISABLE_UPDATE_CHECK=1)
+update_check_interval_days = 7    # how often to check GitHub Releases
+```
 
 ### Recommended Terminal Settings
 
