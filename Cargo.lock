@@ -257,8 +257,8 @@ dependencies = [
 
 [[package]]
 name = "dosu-core"
-version = "0.2.0"
-source = "git+https://github.com/RustNegar/dosu-core?tag=v0.2.0#4d46187b5f66711099822ffd04fb0fb7da92bb6d"
+version = "0.2.1"
+source = "git+https://github.com/RustNegar/dosu-core?tag=v0.2.1#b684f9187e920a7b213ef84bae73e4604bb71287"
 dependencies = [
  "anyhow",
  "portable-pty",
