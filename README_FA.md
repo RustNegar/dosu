@@ -32,6 +32,12 @@
 
 <br>
 
+<div align="center">
+  <img src="assets/demo.gif" alt="دموی دوسو" width="800">
+</div>
+
+<br>
+
 <div dir="rtl">
 
 ## درباره

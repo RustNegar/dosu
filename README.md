@@ -32,6 +32,12 @@
 
 <br>
 
+<div align="center">
+  <img src="assets/demo.gif" alt="Dosu Demo" width="800">
+</div>
+
+<br>
+
 ## About
 
 **Dosu** (دوسو) is a sophisticated terminal wrapper designed to handle bidirectional text rendering seamlessly. Built with Rust on top of [`dosu-core`](https://github.com/RustNegar/dosu-core), it addresses the complex challenges of displaying right-to-left (RTL) languages like Persian and Arabic in terminal environments — without breaking the tools you already use.
