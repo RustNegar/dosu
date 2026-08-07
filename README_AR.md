@@ -5,7 +5,7 @@
   <br>
   <p>
     <img src="https://img.shields.io/badge/rust-+v1.7-orange?style=for-the-badge&logo=rust&logoColor=white" alt="Rust">
-    <img src="https://img.shields.io/badge/version-0.1.0-22C8E6?style=for-the-badge" alt="الإصدار">
+    <img src="https://img.shields.io/badge/version-0.2.1-22C8E6?style=for-the-badge" alt="الإصدار">
     <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="الترخيص">
     <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20macOS-lightgrey?style=for-the-badge" alt="المنصّة">
   </p>
